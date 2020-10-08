@@ -1,18 +1,21 @@
-import * as express from "express"
+import "reflect-metadata";
+import {createConnection} from "typeorm";
+import {User} from "./entity/User";
 
-class App {
-    
-    public application : express.Application;
+createConnection().then(async connection => {
 
-    constructor() {
-        this.application = express();
-    }
-}
+    console.log("Inserting a new user into the database...");
+    const user = new User();
+    user.firstName = "Timber";
+    user.lastName = "Saw";
+    user.age = 25;
+    await connection.manager.save(user);
+    console.log("Saved a new user with id: " + user.id);
 
-const app = new App().application;
+    console.log("Loading users from the database...");
+    const users = await connection.manager.find(User);
+    console.log("Loaded users: ", users);
 
-app.get("/", (req: express.Request, res:express.Response) => {
-    res.send("start");
-});
+    console.log("Here you can setup and run express/koa/any other framework.");
 
-app.listen(4000, ()=> console.log("start"));
+}).catch(error => console.log(error));
