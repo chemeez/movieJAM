@@ -1,11 +1,11 @@
 import * as express from 'express';
 import "reflect-metadata";
-import Server from './Server'
+import Server from './common/Server';
 import dbc from './common/dbc';
 
 import router from './routes/router';
-import echo from './routes/echo';
-//let echo = require('./routes/echo');
+import echo from './routes/echo'; // ES6 방식
+//let echo = require('./routes/echo'); // commonJs 방식
 
 // DB connect ,,,
 dbc.connection();
