@@ -1,22 +1,23 @@
 // header 입니다.
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import GnB from './GnB';
 
 const Header = () => (
-        <CONTAINER id="header">
+        <HeaderWrapper>
             <div id="logo">
                 <LOGO_H1>
-                    <LOGO_A href="/">moiveJAM</LOGO_A>
+                    <LOGO_A component={Link} to='/'>moiveJAM</LOGO_A>
                 </LOGO_H1>
             </div>
             <GnB />
-        </CONTAINER>
+        </HeaderWrapper>
 );
 
 export default Header;
 
-const CONTAINER = styled.div`
+const HeaderWrapper = styled.div`
     overflow: hidden;
     margin: 0em auto;
     width: 1000px;
