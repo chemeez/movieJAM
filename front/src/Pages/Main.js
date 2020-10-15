@@ -21,7 +21,7 @@ export default Layout;
 
 const Wrapper = styled.div`
     background-size: cover;
-    border-top: 10px solid #CC0000;
+    /*border-top: 10px solid #CC0000;*/
     position: relative;
     z-index: 2;
     width: 100%;

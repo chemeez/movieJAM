@@ -6,24 +6,30 @@ import GnB from './GnB';
 
 const Header = () => (
         <Header_div>
-            <div id="logo">
+            <Logo_div>
                 <Logo_h1>
                     <Logo to='/'>moiveJAM</Logo>
                 </Logo_h1>
-            </div>
-            <GnB />
+                <GnB />
+            </Logo_div>
         </Header_div>
 );
 
 export default Header;
 
 const Header_div = styled.div`
+    position: absolute;
+    width: 100%;
+    border-top: 10px solid #CC0000;
+    z-index: 100;
+`;
+const Logo_div = styled.div`
     position: relative;
     width: 980px;
     height: 150px;
     margin: 0 auto;
-    z-index: 1;
 `;
+
 const Logo_h1 = styled.h1`
     position: absolute;
     top: 0;
