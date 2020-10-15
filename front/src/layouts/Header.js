@@ -8,7 +8,7 @@ const Header = () => (
         <Header_div>
             <div id="logo">
                 <Logo_h1>
-                    <Logo_1 component={Link} to='/'>moiveJAM</Logo_1>
+                    <Logo to='/'>moiveJAM</Logo>
                 </Logo_h1>
             </div>
             <GnB />
@@ -32,7 +32,7 @@ const Logo_h1 = styled.h1`
     background: #CC0000;
     border-radius: 0px 0px 5px 5px;
 `;
-const Logo_1 = styled.a`
+const Logo = styled(Link)`
     text-decoration: none;
     color: #FFF;
 `;

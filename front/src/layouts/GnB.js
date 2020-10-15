@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Link = 다른 라우트 경로로 이동함
 
 class GnB extends Component {
@@ -8,12 +8,12 @@ class GnB extends Component {
         return (
             <Nav>
                 <NavList>
-                    <NavItem><NavItemA href='/'>HOME</NavItemA></NavItem>
-                    <NavItem><NavItemA href='/movies'>MOVIES</NavItemA></NavItem>
-                    <NavItem><NavItemA href='/reservation'>TICKET</NavItemA></NavItem>
-                    <NavItem><NavItemA href='/'>Ect</NavItemA></NavItem>
-                    <NavItem><NavItemA href='/login'>Login</NavItemA></NavItem>
-                    <NavItem><NavItemA href='/signup'>Sign Up</NavItemA></NavItem>
+                    <NavItem><NavItemA to='/'>HOME</NavItemA></NavItem>
+                    <NavItem><NavItemA to='/movies'>MOVIES</NavItemA></NavItem>
+                    <NavItem><NavItemA to='/reservation'>TICKET</NavItemA></NavItem>
+                    <NavItem><NavItemA to='/'>Ect</NavItemA></NavItem>
+                    <NavItem><NavItemA to='/login'>Login</NavItemA></NavItem>
+                    <NavItem><NavItemA to='/signup'>Sign Up</NavItemA></NavItem>
                 </NavList>
             </Nav>
         );
@@ -40,7 +40,7 @@ const NavItem = styled.li`
         border-radius: 5px;
     }
 `;
-const NavItemA = styled.a`
+const NavItemA = styled(Link)`
     padding: 1em 1.5em;
     letter-spacing: 1px;
     text-decoration: none;
