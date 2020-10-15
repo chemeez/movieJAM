@@ -8,6 +8,8 @@ const Footer = () => (
     </FooterWrapper>
 )
 
+export default Footer;
+
 const FooterWrapper = styled.div`
     overflow: hidden;
     margin: 0em auto;

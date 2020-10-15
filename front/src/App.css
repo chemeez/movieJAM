@@ -47,3 +47,16 @@ a:hover
 {
 	text-decoration: none;
 }
+
+.container
+{
+	overflow: hidden;
+	margin: 0em auto;
+	width: 1000px;
+}
+
+#staff
+{
+	padding: 5em 0em;
+	text-align: center;
+}

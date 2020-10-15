@@ -5,29 +5,26 @@ import { Link } from 'react-router-dom';
 import GnB from './GnB';
 
 const Header = () => (
-        <HeaderWrapper>
+        <Header_div>
             <div id="logo">
-                <LOGO_H1>
-                    <LOGO_A component={Link} to='/'>moiveJAM</LOGO_A>
-                </LOGO_H1>
+                <Logo_h1>
+                    <Logo_1 component={Link} to='/'>moiveJAM</Logo_1>
+                </Logo_h1>
             </div>
             <GnB />
-        </HeaderWrapper>
+        </Header_div>
 );
 
 export default Header;
 
-const HeaderWrapper = styled.div`
-    overflow: hidden;
-    margin: 0em auto;
-    width: 1000px;
-	position: relative;
+const Header_div = styled.div`
+    position: relative;
     width: 980px;
-	height: 150px;
-	margin: 0 auto;
-	z-index: 1;
+    height: 150px;
+    margin: 0 auto;
+    z-index: 1;
 `;
-const LOGO_H1 = styled.h1`
+const Logo_h1 = styled.h1`
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +32,7 @@ const LOGO_H1 = styled.h1`
     background: #CC0000;
     border-radius: 0px 0px 5px 5px;
 `;
-const LOGO_A = styled.a`
+const Logo_1 = styled.a`
     text-decoration: none;
     color: #FFF;
 `;
