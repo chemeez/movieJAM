@@ -20,7 +20,7 @@ class App extends Component {
 }
 
 const Layout = styled.div`
-
+    position: relative;
 `;
 
 const Content = styled.div`

@@ -48,7 +48,7 @@
         height: 60px;
         margin-top: -15px;
         background-size: auto;
-        background-image: 'images/icon/arr_lf_31_wht.png';
+        background-image: url(/images/icon/arr_lf_31_wht.png);
 }
 
 #banner .owl-nav button.owl-next {
@@ -59,9 +59,8 @@
         height: 60px;
         margin-top: -15px;
         background-size: auto;
-        background-image: 'images/icon/arr_rg_31_wht.png';
+        background-image: url(/images/icon/arr_rg_31_wht.png);
 }
-
 
 .owl-carousel .owl-nav [class*=owl-] span {
         font-size: 0;

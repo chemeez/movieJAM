@@ -8,20 +8,23 @@ import './owl.css';
 export class OwlBanner extends Component {  
   render() {  
     return (  
-      <div id="banner">  
-        <div class='container-fluid' >            
-          <OwlCarousel items={1}  
-            className="owl-theme"  
-            loop  
-            nav
-            margin={3} 
-            autoplay={true}>
-            <div className="item"><img src= {'assets/img/banner01.jpg'} alt=""/></div>  
-            <div className="item"><img src= {'assets/img/banner02.jpg'} alt=""/></div>  
-            <div className="item"><img src= {'assets/img/banner03.jpg'} alt=""/></div>  
-          </OwlCarousel>  
+      <Banner_div>
+        <div id="banner">  
+          <div class='container-fluid' >            
+            <OwlCarousel items={1}  
+              className="owl-theme"  
+              loop  
+              nav
+              dots={false}
+              margin={3} 
+              autoplay={true}>
+              <div className="item"><img src= {'assets/img/banner01.jpg'} alt=""/></div>  
+              <div className="item"><img src= {'assets/img/banner02.jpg'} alt=""/></div>  
+              <div className="item"><img src= {'assets/img/banner03.jpg'} alt=""/></div>  
+            </OwlCarousel>  
+          </div>  
         </div>  
-      </div>  
+      </Banner_div>
     )  
   }  
 }
@@ -101,4 +104,9 @@ const Box = styled.div`
   &:hover .hover {
     display: block;
   }
+`;
+const Banner_div = styled.div`
+  position: static;
+  height: 774px;
+  z-index: 0;
 `;
